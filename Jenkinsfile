@@ -12,6 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean package'
+                sh 'chmod 644 target/mvn_web_app.war'
             }
         }
         stage('Archive') {
